@@ -1,6 +1,8 @@
 
 # BAT-SINAL
 
+![Alt Text](../assets/demo.gif)
+
 O ***BAT-SINAL*** é um app para sinal de alerta.
 
 Ao apertar o botão, ou selecionar no rodapé o formulário ele redirecionará o usuário para a página de formulário.
