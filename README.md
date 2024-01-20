@@ -1,7 +1,7 @@
 
 # BAT-SINAL
 
-!(assets/demo.gif)
+![]("./assets/demo.gif")
 
 O ***BAT-SINAL*** é um app para sinal de alerta.
 
