@@ -9,7 +9,7 @@ O ***BAT-SINAL*** é um app para sinal de alerta.
 
 
 
-Ao apertar o botão, ou selecionar no rodapé o formulário ele redirecionará o usuário para a página de formulário.
+Ao apertar o botão, ou selecionar no rodapé o formulário, ele redirecionará o usuário para a página de formulário.
 
 Na página de preenchimento do formulário há algumas validações:
 - preenchimento obrigatório de alguns dados essenciais
