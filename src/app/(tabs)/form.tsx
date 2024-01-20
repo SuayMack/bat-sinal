@@ -30,7 +30,7 @@ export default function Form() {
     <KeyboardAvoidingView behavior='padding' style={styles.container}>
       <View style={styles.container}>
         <TextInput style={styles.input} placeholder="Nome" placeholderTextColor="#e5c03cb3" value={name} onChangeText={setName} />
-        <TextInput style={styles.input} placeholder="E-mal" placeholderTextColor="#e5c03cb3" keyboardType='email-address' value={email} onChangeText={setEmail} />
+        <TextInput style={styles.input} placeholder="E-mail" placeholderTextColor="#e5c03cb3" keyboardType='email-address' value={email} onChangeText={setEmail} />
         <TextInput style={styles.input} placeholder="Fone" placeholderTextColor="#e5c03cb3" keyboardType='numeric' value={fone} onChangeText={setFone} />
         <TextInput style={styles.input} placeholder="Localização" placeholderTextColor="#e5c03cb3" value={location} onChangeText={setLocation} />
         <TextInput style={styles.input} placeholder="Observação" placeholderTextColor="#e5c03cb3" value={obs} onChangeText={setObs} />
