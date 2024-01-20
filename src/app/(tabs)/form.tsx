@@ -16,7 +16,11 @@ export default function Form() {
   function handleCadastrado() {
     if (name === '' || email === '' || fone === '' || location === '') {
       alert('Preencha todos os campos.');
-    } else {
+    } else if (handleValidateEmail() === false) {
+      alert('Email invalido');      
+    }
+    
+    else {
       alert('Cadastrado com sucesso');
       setName(''),
       setEmail(''),
@@ -25,12 +29,33 @@ export default function Form() {
       setObs('')
     }
   }
+  function handleValidateEmail (){
+    console.log(email);
+    let reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w\w+)+$/;
+    if (reg.test(email) === false) {
+      console.log("Email is Not Correct");
+      setEmail("")
+      return false;
+    }
+    else {
+      setEmail(email)
+      console.log("Email is Correct");
+    }
+  }
 
   return (
     <KeyboardAvoidingView behavior='padding' style={styles.container}>
       <View style={styles.container}>
         <TextInput style={styles.input} placeholder="Nome" placeholderTextColor="#e5c03cb3" value={name} onChangeText={setName} />
-        <TextInput style={styles.input} placeholder="E-mail" placeholderTextColor="#e5c03cb3" keyboardType='email-address' value={email} onChangeText={setEmail} />
+        <TextInput 
+          style={styles.input}  
+          placeholder="E-mail" 
+          placeholderTextColor="#e5c03cb3" 
+          keyboardType='email-address' 
+          value={email} 
+          // onChangeText={setEmail}
+          onChangeText={(e) => {handleValidateEmail(); setEmail(e)} }
+        />
         <TextInput style={styles.input} placeholder="Fone" placeholderTextColor="#e5c03cb3" keyboardType='numeric' value={fone} onChangeText={setFone} />
         <TextInput style={styles.input} placeholder="Localização" placeholderTextColor="#e5c03cb3" value={location} onChangeText={setLocation} />
         <TextInput style={styles.input} placeholder="Observação" placeholderTextColor="#e5c03cb3" value={obs} onChangeText={setObs} />
